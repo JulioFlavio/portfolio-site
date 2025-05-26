@@ -15,7 +15,7 @@ async function pesquisaJson() {
 function substituiHabilidades(minhasHabilidades) {
   minhasHabilidades.forEach(habilidade => {
     document.getElementById("habilidades").innerHTML += `
-      <span class="habilidades">${habilidade.nome}</span>
+      <span class="habilidades bg-purple-500/25 dark:bg-blue-800/25 dark:text-blue-500">${habilidade.nome}</span>
     `});
 }
 
