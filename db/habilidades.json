@@ -3,50 +3,78 @@
     {
       "icon": "<i class='fa-brands fa-html5'></i>",
       "nome": "HTML5",
-      "fundo": "blue",
-      "nivel": "Avançado"
+      "cor1": "blue",
+      "tom1": "500",
+      "cor2": "blue",
+      "tom2": "800",
+      "nivel": "Avançado",
+      "descricao": "Estruturação semântica, formulários, acessibilidade"
     },
 
     {
       "icon": "<i class='fa-brands fa-css3-alt'></i>",
       "nome": "CSS3",
-      "fundo": "blue",
-      "nivel": "Avançado"
+      "cor1": "rose",
+      "tom1": "600",
+      "cor2": "rose",
+      "tom2": "500",
+      "nivel": "Avançado",
+      "descricao": "Flexbox, Grid, animações, responsividade"
     },
 
     {
       "icon": "<i class='fa-brands fa-js'></i>",
       "nome": "JavaScript",
-      "fundo": "blue",
-      "nivel": "Medio"
+      "cor1": "amber",
+      "tom1": "500",
+      "cor2": "amber",
+      "tom2": "400",
+      "nivel": "Medio",
+      "descricao": "DOM, eventos, funções, ES6+"
     },
 
     {
       "icon": "<i class='fa-brands fa-git-alt'></i>",
       "nome": "Git",
-      "fundo": "blue",
-      "nivel": "Medio"
+      "cor1": "blue",
+      "tom1": "500",
+      "cor2": "blue",
+      "tom2": "500",
+      "nivel": "Medio",
+      "descricao": "Commits, branches, merge, GitHub"
     },
 
     {
       "icon": "<i class='fa-brands fa-github'></i>",
       "nome": "GitHub",
-      "fundo": "blue",
-      "nivel": "Medio"
+      "cor1": "orange",
+      "tom1": "500",
+      "cor2": "orang",
+      "tom2": "400",
+      "nivel": "Medio",
+      "descricao": "lorem"
     },
 
     {
       "icon": "<i class='fa-solid fa-mobile'></i>",
       "nome": "Responsividade",
-      "fundo": "blue",
-      "nivel": "Medio"
+      "cor1": "blue",
+      "tom1": "500",
+      "cor2": "blue",
+      "tom2": "500",
+      "nivel": "Medio",
+      "descricao": "Mobile-first, media queries, layouts adaptáveis"
     },
 
     {
       "icon": "<i class='fa-solid fa-flag-usa'></i>",
       "nome": "Inglês",
-      "fundo": "blue",
-      "nivel": "Avançado"
+      "cor1": "blue",
+      "tom1": "500",
+      "cor2": "blue",
+      "tom2": "500",
+      "nivel": "Avançado",
+      "descricao": "Leitura técnica, conversação, documentação"
     }
   ]
 }
