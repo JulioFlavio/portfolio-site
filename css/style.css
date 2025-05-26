@@ -86,3 +86,10 @@ input:checked + .slider::before {
   left: 70%;
   font-size:x-large;
 }
+
+.habilidades {
+  color: rgb(73, 8, 148);
+  padding: 3% 5%;
+  border-radius: 25pt;
+  background-color: rgba(163, 124, 182, 0.3);
+}

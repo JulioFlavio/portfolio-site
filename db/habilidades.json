@@ -1,0 +1,52 @@
+{
+  "habilidades": [
+    {
+      "icon": "<i class='fa-brands fa-html5'></i>",
+      "nome": "HTML5",
+      "fundo": "blue",
+      "nivel": "Avançado"
+    },
+
+    {
+      "icon": "<i class='fa-brands fa-css3-alt'></i>",
+      "nome": "CSS3",
+      "fundo": "blue",
+      "nivel": "Avançado"
+    },
+
+    {
+      "icon": "<i class='fa-brands fa-js'></i>",
+      "nome": "JavaScript",
+      "fundo": "blue",
+      "nivel": "Medio"
+    },
+
+    {
+      "icon": "<i class='fa-brands fa-git-alt'></i>",
+      "nome": "Git",
+      "fundo": "blue",
+      "nivel": "Medio"
+    },
+
+    {
+      "icon": "<i class='fa-brands fa-github'></i>",
+      "nome": "GitHub",
+      "fundo": "blue",
+      "nivel": "Medio"
+    },
+
+    {
+      "icon": "<i class='fa-solid fa-mobile'></i>",
+      "nome": "Responsividade",
+      "fundo": "blue",
+      "nivel": "Medio"
+    },
+
+    {
+      "icon": "<i class='fa-solid fa-flag-usa'></i>",
+      "nome": "Inglês",
+      "fundo": "blue",
+      "nivel": "Avançado"
+    }
+  ]
+}
