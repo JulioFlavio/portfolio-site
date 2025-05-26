@@ -8,7 +8,7 @@
       "cor2": "blue",
       "tom2": "800",
       "nivel": "Avançado",
-      "descricao": "Estruturação semântica, formulários, acessibilidade"
+      "descricao": "É a linguagem de marcação usada para estruturar o conteúdo de páginas web, definindo elementos como títulos, parágrafos, imagens, links e listas."
     },
 
     {
@@ -19,7 +19,7 @@
       "cor2": "rose",
       "tom2": "500",
       "nivel": "Avançado",
-      "descricao": "Flexbox, Grid, animações, responsividade"
+      "descricao": "É a linguagem de marcação usada para estruturar o conteúdo de páginas web, definindo elementos como títulos, parágrafos, imagens, links e listas."
     },
 
     {
@@ -30,7 +30,7 @@
       "cor2": "amber",
       "tom2": "400",
       "nivel": "Medio",
-      "descricao": "DOM, eventos, funções, ES6+"
+      "descricao": "É a linguagem de programação que torna as páginas web interativas, permitindo ações como cliques, animações, validação de formulários e atualizações dinâmicas de conteúdo."
     },
 
     {
@@ -41,7 +41,7 @@
       "cor2": "blue",
       "tom2": "500",
       "nivel": "Medio",
-      "descricao": "Commits, branches, merge, GitHub"
+      "descricao": "É um sistema de controle de versões que permite salvar e acompanhar o histórico de alterações de projetos, facilitando o trabalho em equipe e o gerenciamento de código."
     },
 
     {
@@ -49,32 +49,32 @@
       "nome": "GitHub",
       "cor1": "orange",
       "tom1": "500",
-      "cor2": "orang",
+      "cor2": "orange",
       "tom2": "400",
       "nivel": "Medio",
-      "descricao": "lorem"
+      "descricao": "É uma plataforma online que hospeda repositórios Git, permitindo colaboração entre desenvolvedores, armazenamento de código na nuvem e controle de versões com interface visual."
     },
 
     {
       "icon": "<i class='fa-solid fa-mobile'></i>",
       "nome": "Responsividade",
-      "cor1": "blue",
+      "cor1": "emerald",
       "tom1": "500",
-      "cor2": "blue",
-      "tom2": "500",
+      "cor2": "emerald",
+      "tom2": "600",
       "nivel": "Medio",
-      "descricao": "Mobile-first, media queries, layouts adaptáveis"
+      "descricao": "É a capacidade de um site se adaptar automaticamente a diferentes tamanhos de tela e dispositivos, oferecendo boa usabilidade em celulares, tablets e computadores."
     },
 
     {
       "icon": "<i class='fa-solid fa-flag-usa'></i>",
       "nome": "Inglês",
-      "cor1": "blue",
+      "cor1": "purple",
       "tom1": "500",
-      "cor2": "blue",
-      "tom2": "500",
+      "cor2": "purple",
+      "tom2": "600",
       "nivel": "Avançado",
-      "descricao": "Leitura técnica, conversação, documentação"
+      "descricao": "É o idioma padrão na área de tecnologia e programação, essencial para entender documentações, tutoriais, mensagens de erro e se comunicar com a comunidade global de desenvolvedores."
     }
   ]
 }
