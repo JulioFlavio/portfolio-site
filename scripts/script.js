@@ -38,7 +38,7 @@ async function consultaRepositoriosGithub() {
   
   github.forEach(repositorio => {
     document.getElementById("cards").innerHTML += `
-      <div class="max-w-sm p-6 my-7 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="max-w-sm p-6 my-7 grow bg-white mx-5 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
           <a href="${repositorio.html_url}">
               <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" target="_blank">${repositorio.name}</h5>
           </a>

@@ -19,18 +19,18 @@
         <span class="slider"></span>
       </label>
 
-      <ul class="flex hidden gap-3 text-3xl">
-        <li>Inicio</li>
-        <li>Sobre</li>
-        <li>Projetos</li>
-        <li>Formação</li>
-        <li>Contato</li>
+      <ul class="hidden md:flex gap-3 text-lg">
+        <li><a href="#perfil">Inicio</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#aprendizados">Aprendizados</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Perfil -->
-  <section class="bg-neutral-100 dark:bg-gray-900 dark:text-neutral-50 grid py-15 px-5 justify-items-center">
+  <section id="perfil" class="bg-neutral-100 dark:bg-gray-900 dark:text-neutral-50 grid py-15 px-5 justify-items-center">
     <h1 class="text-4xl font-bold py-5">Júlio Oliveira</h1>
     <span class="text-2xl">Desenvolvedor</span>
     <p class="text-md py-1 px-10 text-gray-800 dark:text-neutral-100 text-center">Desenvolvedor front-end em busca da primeira oportunidade para criar experiências digitais incríveis.</p>
@@ -57,7 +57,7 @@
   </section>
 
   <!-- Sobre Mim -->
-  <section class="bg-neutral-50 dark:bg-gray-800 grid justify-items-center py-3 px-5">
+  <section id="sobre" class="bg-neutral-50 dark:bg-gray-800 grid justify-items-center py-3 px-5">
     <h1 class="font-bold text-4xl dark:text-neutral-50 py-15">Sobre Mim</h1>
     <p class="text-gray-800 dark:text-neutral-50 text-start">Olá! Sou um desenvolvedor iniciante com conhecimentos em HTML, CSS, JavaScript e Git. Busco minha primeira oportunidade na área de tecnologia para aprender e crescer profissionalmente.
     <br><br>
@@ -74,9 +74,9 @@
   </section>
 
   <!-- Meus Projetos -->
-  <section class="grid justify-items-center bg-neutral-100 dark:bg-gray-900">
+  <section id="projetos" class="grid justify-items-center bg-neutral-100 dark:bg-gray-900">
     <h1 class="font-bold text-4xl dark:text-neutral-50 py-15">Meus Projetos</h1>
-    <div id="cards" class="">
+    <div id="cards" class="flex flex-wrap">
       <!-- JavaScript -->
     </div>
 
@@ -84,28 +84,28 @@
   </section>
 
   <!-- Aprendizados -->
-  <section class="grid justify-items-center bg-neutral-50 dark:bg-gray-800">
+  <section id="aprendizados" class="grid justify-items-center bg-neutral-50 dark:bg-gray-800">
     <h1 class="font-bold text-4xl dark:text-neutral-50 py-15">Aprendizados</h1>
-    <div id="formacoes" class="border-l-1 p-4 m-3 flex flex-wrap">
+    <div id="formacoes" class="border-l-1 border-dotted p-4 m-3 grid">
       <!-- JavaScript -->
     </div>
   </section>
 
   <!-- Contato -->
-  <section class="grid justify-strech bg-neutral-100 dark:bg-gray-900">
+  <section id="contato" class="grid justify-strech bg-neutral-100 dark:bg-gray-900">
     <h1 class="font-bold justify-self-center text-4xl dark:text-neutral-50 py-15">Contato</h1>
 
     <div class="bg-neutral-50 dark:bg-gray-800 dark:text-neutral-50 shadow-xl border dark:border-none border-gray-100 m-8 mt-0 rounded-xl p-10">
       <h3 class="text-2xl mb-5">Envie uma mensagem</h3>
-      <form action="" class="flex flex-wrap">
+      <form action="" class="grid">
         <label class="text-lg" for="nome">Nome</label>
-        <input class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-10 grow my-3" type="text" name="nome" id="nome">
+        <input class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-10 my-3" type="text" name="nome" id="nome">
         <label for="nome">Email</label>
-        <input class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-10 grow my-3" type="email" name="email" id="email">
+        <input class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-10 my-3" type="email" name="email" id="email">
         <label for="mensagem">Mensagem</label>
-        <textarea class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-30 grow my-3" name="mensagem" id="mensagem"></textarea>
+        <textarea class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-30 my-3" name="mensagem" id="mensagem"></textarea>
         
-        <button class="dark:border-none border grow p-4 mt-4 rounded-lg bg-blue-700 text-neutral-50 font-bold shadow-xl" type="submit">Enviar Mensagem</button>
+        <button class="dark:border-none border justify-self-center p-4 mt-4 rounded-lg bg-blue-700 text-neutral-50 font-bold shadow-xl" type="submit">Enviar Mensagem</button>
       </form>
     </div>
 
@@ -164,8 +164,12 @@
     </div>
   </section>
 
-  <footer class="bg-neutral-50 dark:bg-gray-800 grid grid-flow-col p-5 justify-center">
-    <h1 class="text-2xl font-bold">Júlio Oliveira</h1>
+  <footer class="bg-neutral-50 dark:bg-gray-800 dark:text-neutral-50 grid p-10 border-t dark:border-none justify-center">
+    <h1 class="text-2xl font-bold justify-self-center">Júlio Oliveira</h1>
+    <h2 class="text-xl my-2 justify-self-center dark:text-gray-400">Desenvolvedor Front-End</h2>
+    <p class="my-3 dark:text-gray-400">© 2024 Júlio Oliveira. Todos os direitos reservados.</p>
+
+    <p class="justify-self-center dark:text-gray-400">Feito com ❤️ e muito código</p>
   </footer>
   <script src="scripts/script.js"></script>
 </body>
