@@ -76,5 +76,28 @@
       "nivel": "Avançado",
       "descricao": "É o idioma padrão na área de tecnologia e programação, essencial para entender documentações, tutoriais, mensagens de erro e se comunicar com a comunidade global de desenvolvedores."
     }
+  ],
+  "aprendizados": [
+    {
+      "inicio": "2024",
+      "conclusao": "2027",
+      "nome": "Análise e Desenvolvimento de Sistemas",
+      "instituicao": "PUC Minas",
+      "descricao": "Cursando graduação com foco em desenvolvimento web, banco de dados e engenharia de software."
+    },
+    {
+      "inicio": "2025",
+      "conclusao": "2025",
+      "nome": "Git e GitHub",
+      "instituicao": "Autodidata",
+      "descricao": "Versionamento de código"
+    },
+    {
+      "inicio": "2025",
+      "conclusao": "2025",
+      "nome": "Inglês",
+      "instituicao": "Autodidata",
+      "descricao": "Versionamento de código"
+    }
   ]
 }

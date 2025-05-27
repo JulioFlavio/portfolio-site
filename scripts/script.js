@@ -1,24 +1,25 @@
 async function pesquisaJson() {
-  await fetch("db/habilidades.json")
+  await fetch("db/informacoes.json")
   .then((response) => {
     return response.json();
   })
   .then(data => {
     
-    substituiHabilidades(data.habilidades)
-    substituiNivel(data.habilidades)
+    preencheHabilidades(data.habilidades)
+    preencheNivel(data.habilidades)
+    preencheAprendizados(data.aprendizados)
 
   })
 }
 
-function substituiHabilidades(minhasHabilidades) {
+function preencheHabilidades(minhasHabilidades) {
   minhasHabilidades.forEach(habilidade => {
     document.getElementById("habilidades").innerHTML += `
       <span class="habilidades bg-purple-500/25 dark:bg-blue-800/25 dark:text-blue-500">${habilidade.nome}</span>
     `});
 }
 
-function substituiNivel(minhasHabilidades) {
+function preencheNivel(minhasHabilidades) {
   minhasHabilidades.forEach(habilidade => {
     document.getElementById("nivel").innerHTML += `
       <div class="my-5 p-3 flex flex-wrap justify-between text-neutral-50 rounded-xl bg-linear-to-r from-${habilidade.cor1}-${habilidade.tom1} to-${habilidade.cor2}-${habilidade.tom2}">
@@ -31,14 +32,10 @@ function substituiNivel(minhasHabilidades) {
 
 }
 
-pesquisaJson()
-// chama também "subsituiHabilidades" e "substituiNivel"
-
 async function consultaRepositoriosGithub() {
   const resposta = await fetch("https://api.github.com/users/JulioFlavio/repos")
   const github = await resposta.json()
   
-  console.log(github)
   github.forEach(repositorio => {
     document.getElementById("cards").innerHTML += `
       <div class="max-w-sm p-6 my-7 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
@@ -57,4 +54,38 @@ async function consultaRepositoriosGithub() {
   });
 }
 
+function preencheAprendizados(meusAprendizados) {
+
+  // Preenchendo com o primeiro elemento (primeira formação) sozinha pois ela terá uma pequena animação
+  document.getElementById("formacoes").innerHTML += `
+    <a href="#" class="block m-3 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+      <span class="relative -top-3 -left-3 flex size-3">
+        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+        <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span>
+      </span>
+      <span class="text-purple-800 font-bold">${meusAprendizados[0].inicio} - ${meusAprendizados[0].conclusao}</span>
+      <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${meusAprendizados[0].nome}</h3>
+      <p class="font-normal text-purple-700 dark:text-purple-800">${meusAprendizados[0].instituicao}</p>
+      <p class="font-normal text-gray-700 dark:text-gray-400">${meusAprendizados[0].descricao}</p>
+    </a>
+  `
+
+  // Todos os outros aprendizados começando a partir do segundo
+  for (let i = 1; i < meusAprendizados.length; i++) {
+    document.getElementById("formacoes").innerHTML += `
+      <a href="#" class="block grow m-3 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+        <span class="relative -top-3 -left-3 flex size-3">
+          <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span>
+        </span>
+        <span class="text-purple-800 font-bold">${meusAprendizados[i].inicio} - ${meusAprendizados[i].conclusao}</span>
+        <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${meusAprendizados[i].nome}</h3>
+        <p class="font-normal text-purple-700 dark:text-purple-800">${meusAprendizados[i].instituicao}</p>
+        <p class="font-normal text-gray-700 dark:text-gray-400">${meusAprendizados[i].descricao}</p>
+      </a>
+    `
+  }
+}
+
+pesquisaJson()
+// chama também "subsituiHabilidades" e "preencheNivel"
 consultaRepositoriosGithub()
