@@ -15,7 +15,7 @@ async function pesquisaJson() {
 function preencheHabilidades(minhasHabilidades) {
   minhasHabilidades.forEach(habilidade => {
     document.getElementById("habilidades").innerHTML += `
-      <span class="habilidades bg-purple-500/25 dark:bg-blue-800/25 dark:text-blue-500">${habilidade.nome}</span>
+      <span class="bg-purple-500/25 rounded-3xl py-3 px-5 dark:bg-blue-800/25 dark:text-blue-500">${habilidade.nome}</span>
     `});
 }
 

@@ -19,7 +19,7 @@
         <span class="slider"></span>
       </label>
 
-      <ul class="hidden md:flex gap-3 text-lg">
+      <ul class="hidden md:flex gap-3 dark:text-neutral-50 text-lg">
         <li><a href="#perfil">Inicio</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#projetos">Projetos</a></li>
@@ -59,18 +59,25 @@
   <!-- Sobre Mim -->
   <section id="sobre" class="bg-neutral-50 dark:bg-gray-800 grid justify-items-center py-3 px-5">
     <h1 class="font-bold text-4xl dark:text-neutral-50 py-15">Sobre Mim</h1>
-    <p class="text-gray-800 dark:text-neutral-50 text-start">Olá! Sou um desenvolvedor iniciante com conhecimentos em HTML, CSS, JavaScript e Git. Busco minha primeira oportunidade na área de tecnologia para aprender e crescer profissionalmente.
-    <br><br>
-    Atualmente estou cursando Análise e Desenvolvimento de Sistemas na PUC Minas, onde venho desenvolvendo projetos práticos e aprimorando minhas habilidades técnicas.</p>
+    <div class="lg:grid lg:grid-cols-2">
+      <div class="lg:col-start-1 px-10">
+        <p class="text-gray-800 dark:text-neutral-50 text-start">Olá! Sou um desenvolvedor iniciante com conhecimentos em HTML, CSS, JavaScript e Git. Busco minha primeira oportunidade na área de tecnologia para aprender e crescer profissionalmente.
+        <br><br>
+        Atualmente estou cursando Análise e Desenvolvimento de Sistemas na PUC Minas, onde venho desenvolvendo projetos práticos e aprimorando minhas habilidades técnicas.</p>
 
-    <h1 class="text-xl dark:text-neutral-50 justify-self-start py-5">Minhas habilidades</h1>
-    <div id="habilidades" class="flex flex-wrap gap-3">
-      <!-- Itens no JavaScript -->
+        <h1 class="text-xl dark:text-neutral-50 justify-self-start py-5 lg:font-bold">Minhas habilidades</h1>
+        <div id="habilidades" class="flex flex-wrap gap-3">
+          <!-- Itens no JavaScript -->
+        </div>
+      </div>
+
+      <div class="lg:col-start-2">
+        <h1 class="text-xl dark:text-neutral-50 justify-self-start my-5 font-bold">Nível de Conhecimento</h1>
+        <div id="nivel" class="md:grid md:grid-cols-2 md:gap-6 md:gap-y-2 lg:grid lg:grid-cols-2 xl:grid-cols-3 lg:gap-6 lg:gap-y-2">
+          <!-- JavaScript -->
+        </div>
+      </div>
     </div>
-
-    <h1 class="text-xl dark:text-neutral-50 justify-self-start my-5">Nível de Conhecimento</h1>
-    <div id="nivel">
-      <!-- Itens no JavaScript -->
   </section>
 
   <!-- Meus Projetos -->
@@ -168,12 +175,16 @@
     </div>
   </section>
 
-  <footer class="bg-neutral-50 dark:bg-gray-800 dark:text-neutral-50 grid p-10 dark:border-none justify-center">
-    <h1 class="text-2xl font-bold justify-self-center">Júlio Oliveira</h1>
-    <h2 class="text-xl my-2 justify-self-center dark:text-gray-400">Desenvolvedor Front-End</h2>
-    <p class="my-3 dark:text-gray-400">© 2024 Júlio Oliveira. Todos os direitos reservados.</p>
+  <footer class="bg-neutral-50 dark:bg-gray-800 dark:text-neutral-50 grid lg:grid-cols-2 p-10 dark:border-none justify-center">
+    <div class="lg:col-start-1">
+      <h1 class="text-2xl font-bold justify-self-center">Júlio Oliveira</h1>
+      <h2 class="text-xl my-2 justify-self-center dark:text-gray-400">Desenvolvedor Front-End</h2>
+    </div>
 
-    <p class="justify-self-center dark:text-gray-400">Feito com ❤️ e muito código</p>
+    <div class="lg:col-start2 lg:justify-self-end">
+      <p class="my-3 dark:text-gray-400">© 2024 Júlio Oliveira. Todos os direitos reservados.</p>
+      <p class="justify-self-center dark:text-gray-400">Feito com ❤️ e muito código</p>
+    </div>
   </footer>
   <script src="scripts/script.js"></script>
 </body>
