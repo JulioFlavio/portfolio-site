@@ -14,10 +14,10 @@
     <span class="text-xl text-purple-800 font-bold">JO</span>
     <div class="justify-self-end flex gap-3 mx-5">
 
-      <label class="switch">
+      <!-- <label class="switch">
         <input type="checkbox" id="meuSwitch">
         <span class="slider"></span>
-      </label>
+      </label> -->
 
       <ul class="hidden md:flex gap-3 dark:text-neutral-50 text-lg">
         <li><a href="#perfil">Inicio</a></li>
@@ -113,13 +113,13 @@
 
       <div class="bg-neutral-50 dark:bg-gray-800 dark:text-neutral-50 shadow-xl border dark:border-none border-gray-100 m-8 mt-0 rounded-xl p-10">
         <h3 class="text-2xl mb-5">Envie uma mensagem</h3>
-        <form action="" class="grid">
+        <form action="enviarEmail.php" class="grid">
           <label class="text-lg" for="nome">Nome</label>
-          <input class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-10 my-3" type="text" name="nome" id="nome">
+          <input class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-10 my-3 p-5" type="text" name="nome" id="nome">
           <label for="nome">Email</label>
-          <input class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-10 my-3" type="email" name="email" id="email">
+          <input class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-10 my-3 p-5" type="email" name="email" id="email">
           <label for="mensagem">Mensagem</label>
-          <textarea class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-30 my-3" name="mensagem" id="mensagem"></textarea>
+          <textarea class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-30 my-3 p-5" name="mensagem" id="mensagem"></textarea>
           
           <button class="dark:border-none border justify-self-center p-4 mt-4 rounded-lg bg-blue-700 text-neutral-50 font-bold shadow-xl" type="submit">Enviar Mensagem</button>
         </form>
@@ -193,6 +193,7 @@
       <p class="justify-self-center dark:text-gray-400">Feito com ❤️ e muito código</p>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="scripts/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,13 @@
+function aviso() {
+  Swal.fire({
+  title: "Aviso!",
+  text: "Este site usa configurações de acordo com o tema de seu sitema. O site está em constante construção, em caso de algum erro envie uma mensagem!",
+  icon: "question",
+  confirmButtonText: "Prosseguir"
+});
+}
+aviso()
+
 async function pesquisaJson() {
   await fetch("db/informacoes.json")
   .then((response) => {
@@ -58,7 +68,7 @@ function preencheAprendizados(meusAprendizados) {
 
   // Preenchendo com o primeiro elemento (primeira formação) sozinha pois ela terá uma pequena animação
   document.getElementById("formacoes").innerHTML += `
-    <a href="#" class="block m-3 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+    <div href="#" class="block m-3 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
       <span class="relative -top-3 -left-3 flex size-3">
         <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
         <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span>
@@ -67,7 +77,7 @@ function preencheAprendizados(meusAprendizados) {
       <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${meusAprendizados[0].nome}</h3>
       <p class="font-normal text-purple-700 dark:text-purple-800">${meusAprendizados[0].instituicao}</p>
       <p class="font-normal text-gray-700 dark:text-gray-400">${meusAprendizados[0].descricao}</p>
-    </a>
+    </div>
   `
 
   // Todos os outros aprendizados começando a partir do segundo
@@ -143,3 +153,40 @@ function efeitoDigitacaoVetor() {
   digitarProximo();
 }
 efeitoDigitacaoVetor();
+
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault(); // Evita o recarregamento da página
+
+  const formData = new FormData(this);
+
+  fetch('enviar_email.php', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+      if (data.success) {
+          Swal.fire({
+              icon: 'success',
+              title: 'Sucesso!',
+              text: data.message,
+              confirmButtonText: 'OK'
+          });
+      } else {
+          Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: data.message,
+              confirmButtonText: 'Tentar novamente'
+          });
+      }
+  })
+  .catch(error => {
+      Swal.fire({
+          icon: 'error',
+          title: 'Erro inesperado',
+          text: 'Falha na comunicação com o servidor.',
+          confirmButtonText: 'Fechar'
+      });
+  });
+});

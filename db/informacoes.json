@@ -93,11 +93,25 @@
       "descricao": "Versionamento de código"
     },
     {
-      "inicio": "2025",
-      "conclusao": "2025",
+      "inicio": "2024",
+      "conclusao": "2024",
+      "nome": "HTML5 e CSS3",
+      "instituicao": "Curso em Vídeo",
+      "descricao": "Curso completo de HTML5 e CSS3 disponibilizado pelo canal Curso em Vídeo no Youtube"
+    },
+    {
+      "inicio": "2024",
+      "conclusao": "2024",
+      "nome": "Lógica de Programação",
+      "instituicao": "Curso em Vídeo",
+      "descricao": "Curso completo de lógica de programação disponibilizado pelo canal Curso em Vídeo no Youtube"
+    },
+    {
+      "inicio": "2019",
+      "conclusao": "2019",
       "nome": "Inglês",
       "instituicao": "Autodidata",
-      "descricao": "Versionamento de código"
+      "descricao": ""
     }
   ]
 }
