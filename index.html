@@ -30,29 +30,36 @@
   </nav>
 
   <!-- Perfil -->
-  <section id="perfil" class="bg-neutral-100 dark:bg-gray-900 dark:text-neutral-50 grid py-15 px-5 justify-items-center">
-    <h1 class="text-4xl font-bold py-5">Júlio Oliveira</h1>
-    <span class="text-2xl">Desenvolvedor</span>
-    <p class="text-md py-1 px-10 text-gray-800 dark:text-neutral-100 text-center">Desenvolvedor front-end em busca da primeira oportunidade para criar experiências digitais incríveis.</p>
+  <section id="perfil" class="bg-neutral-100 dark:bg-gray-900 dark:text-neutral-50 grid lg:grid-cols-2 lg:py-70 py-15 px-5 justify-items-center">
+    <div class="lg:col-start-1">
+      <h1 class="text-4xl font-bold py-5 text-center lg:text-start">Júlio Oliveira</h1>
+      <h2 id="titulos" class="text-1xl text-center text-purple-800 font-bold lg:text-start"></h2>
+      <p class="text-lg py-10 px-10 pt-2 lg:p-0 text-gray-800 dark:text-neutral-100 text-center">Desenvolvedor front-end em busca da primeira oportunidade para criar experiências digitais incríveis.</p>
 
-    <div class="my-6 flex flex-wrap justify-center gap-5">
-      <a class="" id="curriculo" href="julio_oliveira.pdf" download target="_blank" rel="noopener noreferrer">
-        <i class="fa-solid fa-file-pdf"></i>
-        <button>Curriculo PDF</button>
-      </a>
-      <a class="" id="github" href="http://github.com/JulioFlavio" target="_blank" rel="noopener noreferrer"> 
-        <i class="fa-brands fa-github"></i>
-        <button>GitHub</button>
-      </a>
-      <a class="" id="linkedin" href="http://linkedin.com/in/lagesdeoliveira" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-linkedin"></i>
-        <button>LinkedIn</button>
-      </a>
+      <div id="botoes" class="flex flex-wrap gap-5 mb-7 justify-center lg:justify-start lg:my-8 lg:flex lg:gap-5">
+
+        <a class="bg-purple-800 p-5 text-neutral-50 text-xl rounded-lg font-bold" href="julio_oliveira.pdf" download>
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Currículo PDF</span>
+        </a>
+        <a class="bg-gray-700 p-5 text-neutral-50 text-xl rounded-lg font-bold" href="julio_oliveira.pdf" download>
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a class="bg-blue-500 p-5 text-neutral-50 text-xl rounded-lg font-bold" href="julio_oliveira.pdf" download>
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+
+      </div>
+
     </div>
 
-    <div class="gap-5">
-      <img id="foto_perfil" class="w-80 h-auto" src="imagens/foto_perfil.jpg" alt="" srcset="">
-      <span id="setas">&lt;/&gt;</span>
+    <div class="lg:col-start-2">
+      <div class="gap-5">
+        <img id="foto_perfil" class="w-80 h-auto lg:w-100" src="imagens/foto_perfil.jpg" alt="" srcset="">
+        <span id="setas">&lt;/&gt;</span>
+      </div>
     </div>
   </section>
 

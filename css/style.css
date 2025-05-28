@@ -91,3 +91,21 @@ input:checked + .slider::before {
   background-color: blue;
   border-radius: 50%;
 }
+
+#titulos {
+  font-family: Arial, sans-serif;
+  font-size: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Efeito de cursor piscando */
+#titulos::after {
+  content: "|";
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

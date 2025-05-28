@@ -89,3 +89,57 @@ function preencheAprendizados(meusAprendizados) {
 pesquisaJson()
 // chama também "subsituiHabilidades" e "preencheNivel"
 consultaRepositoriosGithub()
+
+function efeitoDigitacaoVetor() {
+  const frases = ["Desenvolvedor Front-End", "Software Developer", "Front-End Developer", "Front-End Engineer", "Web UI Developer"]
+  const elemento = document.getElementById("titulos");
+  const velocidade = 80;
+  const pausaEntreFrases = 1500;
+  let indiceTexto = 0;
+
+  function digitarTexto(texto, callback) {
+    let i = 0;
+    elemento.textContent = "";
+
+    function digitar() {
+      if (i < texto.length) {
+        elemento.textContent += texto.charAt(i);
+        i++;
+        setTimeout(digitar, velocidade);
+      } else {
+        setTimeout(() => apagarTexto(callback), pausaEntreFrases);
+      }
+    }
+
+    digitar();
+  }
+
+  function apagarTexto(callback) {
+    let i = elemento.textContent.length;
+
+    function apagar() {
+      if (i >= 0) {
+        elemento.textContent = elemento.textContent.substring(0, i);
+        i--;
+        setTimeout(apagar, velocidade / 2);
+      } else {
+        callback();
+      }
+    }
+
+    apagar();
+  }
+
+  function digitarProximo() {
+    if (indiceTexto < frases.length) {
+      digitarTexto(frases[indiceTexto], digitarProximo);
+      indiceTexto++;
+    } else {
+      indiceTexto = 0; // reinicia loop
+      digitarProximo();
+    }
+  }
+
+  digitarProximo();
+}
+efeitoDigitacaoVetor();
