@@ -1,15 +1,15 @@
 function aviso() {
   Swal.fire({
-  title: "Aviso!",
-  text: "Este site usa configurações de acordo com o tema de seu sitema. O site está em constante construção, em caso de algum erro envie uma mensagem!",
-  icon: "question",
-  confirmButtonText: "Prosseguir"
-});
+    title: "Aviso!",
+    text: "Este site usa configurações de acordo com o tema de seu sitema. O site está em constante construção, em caso de algum erro envie uma mensagem!",
+    icon: "question",
+    confirmButtonText: "Prosseguir"
+  });
 }
 aviso()
 
 async function pesquisaJson() {
-  await fetch("db/informacoes.json")
+  await fetch("../db/informacoes.json")
   .then((response) => {
     return response.json();
   })
@@ -47,26 +47,43 @@ async function consultaRepositoriosGithub() {
   const github = await resposta.json()
   
   github.forEach(repositorio => {
-    document.getElementById("cards").innerHTML += `
-      <div class="max-w-sm p-6 my-7 grow bg-white mx-5 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
-          <a href="${repositorio.html_url}">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" target="_blank">${repositorio.name}</h5>
-          </a>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${repositorio.description}</p>
-          <a href="${repositorio.html_url}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-              Ver no GitHub
-              <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-              </svg>
-          </a>
-      </div>
-    `
+    if (repositorio.description != null) {
+      document.getElementById("cards").innerHTML += `
+        <div class="max-w-sm p-6 my-7 grow bg-white mx-5 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            <a href="${repositorio.html_url}">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" target="_blank">${repositorio.name}</h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">${repositorio.description}</p>
+            <a href="${repositorio.html_url}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Ver no GitHub
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+        </div>
+      `
+    } else {
+      document.getElementById("cards").innerHTML += `
+        <div class="max-w-sm p-6 my-7 grow bg-white mx-5 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+            <a href="${repositorio.html_url}">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white" target="_blank">${repositorio.name}</h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Sem descrição disponível.</p>
+            <a href="${repositorio.html_url}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Ver no GitHub
+                <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+        </div>
+      `
+    }
   });
 }
 
 function preencheAprendizados(meusAprendizados) {
 
-  // Preenchendo com o primeiro elemento (primeira formação) sozinha pois ela terá uma pequena animação
+  // Preenchendo com o primeiro elemento (primeira formação) sozinha pois ela terá uma pequena animação na bolinha
   document.getElementById("formacoes").innerHTML += `
     <div href="#" class="block m-3 max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
       <span class="relative -top-3 -left-3 flex size-3">
@@ -101,7 +118,7 @@ pesquisaJson()
 consultaRepositoriosGithub()
 
 function efeitoDigitacaoVetor() {
-  const frases = ["Desenvolvedor Front-End", "Software Developer", "Front-End Developer", "Front-End Engineer", "Web UI Developer"]
+  const frases = ["Desenvolvedor FullStack", "Software Developer", "FullStack Developer", "FullStack Engineer", "Web UI Developer"]
   const elemento = document.getElementById("titulos");
   const velocidade = 80;
   const pausaEntreFrases = 1500;
@@ -153,40 +170,3 @@ function efeitoDigitacaoVetor() {
   digitarProximo();
 }
 efeitoDigitacaoVetor();
-
-document.querySelector('form').addEventListener('submit', function(e) {
-  e.preventDefault(); // Evita o recarregamento da página
-
-  const formData = new FormData(this);
-
-  fetch('enviar_email.php', {
-      method: 'POST',
-      body: formData
-  })
-  .then(response => response.json())
-  .then(data => {
-      if (data.success) {
-          Swal.fire({
-              icon: 'success',
-              title: 'Sucesso!',
-              text: data.message,
-              confirmButtonText: 'OK'
-          });
-      } else {
-          Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: data.message,
-              confirmButtonText: 'Tentar novamente'
-          });
-      }
-  })
-  .catch(error => {
-      Swal.fire({
-          icon: 'error',
-          title: 'Erro inesperado',
-          text: 'Falha na comunicação com o servidor.',
-          confirmButtonText: 'Fechar'
-      });
-  });
-});
