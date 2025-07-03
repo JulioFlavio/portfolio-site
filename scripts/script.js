@@ -179,9 +179,9 @@ document.getElementById('formularioContato').addEventListener('submit', async (e
   const mensagem = document.getElementById("mensagem").value;
 
   const dados = {
-    email: email,
-    mensagem: mensagem,
-    nome: nome
+    email,
+    mensagem,
+    nome
   };
 
   const resposta = await fetch('/enviar', {
