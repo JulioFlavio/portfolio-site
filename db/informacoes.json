@@ -7,7 +7,7 @@
       "tom1": "500",
       "cor2": "blue",
       "tom2": "800",
-      "nivel": "Avançado",
+      "nivel": "Intermediário",
       "descricao": "É a linguagem de marcação usada para estruturar o conteúdo de páginas web, definindo elementos como títulos, parágrafos, imagens, links e listas."
     },
 
@@ -18,7 +18,7 @@
       "tom1": "600",
       "cor2": "rose",
       "tom2": "500",
-      "nivel": "Avançado",
+      "nivel": "Intermediário",
       "descricao": "É a linguagem de marcação usada para estruturar o conteúdo de páginas web, definindo elementos como títulos, parágrafos, imagens, links e listas."
     },
 
@@ -29,7 +29,7 @@
       "tom1": "500",
       "cor2": "amber",
       "tom2": "400",
-      "nivel": "Medio",
+      "nivel": "Intermediário",
       "descricao": "É a linguagem de programação que torna as páginas web interativas, permitindo ações como cliques, animações, validação de formulários e atualizações dinâmicas de conteúdo."
     },
 
@@ -40,7 +40,7 @@
       "tom1": "500",
       "cor2": "blue",
       "tom2": "500",
-      "nivel": "Medio",
+      "nivel": "Básico",
       "descricao": "É um sistema de controle de versões que permite salvar e acompanhar o histórico de alterações de projetos, facilitando o trabalho em equipe e o gerenciamento de código."
     },
 
@@ -51,7 +51,7 @@
       "tom1": "500",
       "cor2": "orange",
       "tom2": "400",
-      "nivel": "Medio",
+      "nivel": "Básico",
       "descricao": "É uma plataforma online que hospeda repositórios Git, permitindo colaboração entre desenvolvedores, armazenamento de código na nuvem e controle de versões com interface visual."
     },
 
@@ -62,7 +62,7 @@
       "tom1": "500",
       "cor2": "emerald",
       "tom2": "600",
-      "nivel": "Medio",
+      "nivel": "Avançado",
       "descricao": "É a capacidade de um site se adaptar automaticamente a diferentes tamanhos de tela e dispositivos, oferecendo boa usabilidade em celulares, tablets e computadores."
     },
 
@@ -73,8 +73,78 @@
       "tom1": "500",
       "cor2": "purple",
       "tom2": "600",
-      "nivel": "Avançado",
+      "nivel": "Intermediário",
       "descricao": "É o idioma padrão na área de tecnologia e programação, essencial para entender documentações, tutoriais, mensagens de erro e se comunicar com a comunidade global de desenvolvedores."
+    },
+    {
+      "icon": "<i class='fa-brands fa-node-js'></i>",
+      "nome": "Node.js",
+      "cor1": "green",
+      "tom1": "500",
+      "cor2": "emerald",
+      "tom2": "600",
+      "nivel": "Básico",
+      "descricao": "Node.js permite executar JavaScript no back-end, sendo muito usado em APIs, servidores e aplicações em tempo real. É leve, eficiente e tem um enorme ecossistema de pacotes."
+    },
+    {
+      "icon": "<i class='fa-brands fa-react'></i>",
+      "nome": "React",
+      "cor1": "cyan",
+      "tom1": "500",
+      "cor2": "blue",
+      "tom2": "600",
+      "nivel": "Básico",
+      "descricao": "React é uma biblioteca JavaScript para construção de interfaces modernas, reativas e escaláveis. É mantida pelo Facebook e usada por grandes empresas ao redor do mundo."
+    },
+    {
+      "icon": "<i class='fa-brands fa-bootstrap'></i>",
+      "nome": "Bootstrap",
+      "cor1": "violet",
+      "tom1": "500",
+      "cor2": "indigo",
+      "tom2": "600",
+      "nivel": "Avançado",
+      "descricao": "Bootstrap é um framework CSS muito popular que facilita a criação de layouts responsivos com componentes prontos e estilos consistentes."
+    },
+    {
+      "icon": "<i class='fa-solid fa-palette'></i>",
+      "nome": "Tailwind CSS",
+      "cor1": "sky",
+      "tom1": "500",
+      "cor2": "teal",
+      "tom2": "600",
+      "nivel": "Avançado",
+      "descricao": "Tailwind é um framework CSS utilitário que permite estilizar diretamente com classes. Ideal para criar interfaces modernas, personalizáveis e com menos CSS repetido."
+    },
+    {
+      "icon": "<i class='fa-solid fa-code'></i>",
+      "nome": "C#",
+      "cor1": "indigo",
+      "tom1": "500",
+      "cor2": "fuchsia",
+      "tom2": "600",
+      "nivel": "Intermediário",
+      "descricao": "C# é uma linguagem moderna e orientada a objetos, muito usada no desenvolvimento de aplicações Windows, jogos com Unity, e sistemas empresariais com .NET."
+    },
+    {
+      "icon": "<i class='fa-brands fa-python'></i>",
+      "nome": "Python",
+      "cor1": "yellow",
+      "tom1": "600",
+      "cor2": "amber",
+      "tom2": "500",
+      "nivel": "Básico",
+      "descricao": "Python é uma linguagem de programação versátil e fácil de aprender. Usada em ciência de dados, automação, back-end, inteligência artificial e muito mais."
+    },
+    {
+      "icon": "<i class='fa-brands fa-linux'></i>",
+      "nome": "Linux",
+      "cor1": "neutral",
+      "tom1": "700",
+      "cor2": "zinc",
+      "tom2": "800",
+      "nivel": "Básico",
+      "descricao": "Linux é um sistema operacional poderoso, muito usado por desenvolvedores. Trabalhar com terminal, permissões, servidores e ferramentas CLI é fundamental em ambientes Linux."
     }
   ],
   "aprendizados": [

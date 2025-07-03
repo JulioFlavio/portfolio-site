@@ -6,7 +6,6 @@ function aviso() {
     confirmButtonText: "Prosseguir"
   });
 }
-aviso()
 
 async function pesquisaJson() {
   await fetch("/db/informacoes.json")
@@ -113,10 +112,6 @@ function preencheAprendizados(meusAprendizados) {
   }
 }
 
-pesquisaJson()
-// chama também "subsituiHabilidades" e "preencheNivel"
-consultaRepositoriosGithub()
-
 function efeitoDigitacaoVetor() {
   const frases = ["Desenvolvedor FullStack", "Software Developer", "FullStack Developer", "FullStack Engineer", "Web UI Developer"]
   const elemento = document.getElementById("titulos");
@@ -169,15 +164,24 @@ function efeitoDigitacaoVetor() {
 
   digitarProximo();
 }
+
+aviso()
+pesquisaJson()
+// chama também "subsituiHabilidades" e "preencheNivel"
+consultaRepositoriosGithub()
 efeitoDigitacaoVetor();
 
 document.getElementById('formularioContato').addEventListener('submit', async (e) => {
   e.preventDefault();
-  const form = e.target;
+
+  const nome = document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const mensagem = document.getElementById("mensagem").value;
+
   const dados = {
-    nome: form.nome.value,
-    email: form.email.value,
-    mensagem: form.mensagem.value
+    email: email,
+    mensagem: mensagem,
+    nome: nome
   };
 
   const resposta = await fetch('/enviar', {
@@ -185,5 +189,8 @@ document.getElementById('formularioContato').addEventListener('submit', async (e
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(dados)
   });
-  window.location.reload();
+
+  const response = await resposta.json()
+  console.log(response)
+  // window.location.reload();
 });
