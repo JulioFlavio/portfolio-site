@@ -9,7 +9,7 @@ function aviso() {
 aviso()
 
 async function pesquisaJson() {
-  await fetch("../db/informacoes.json")
+  await fetch("/db/informacoes.json")
   .then((response) => {
     return response.json();
   })
@@ -170,3 +170,20 @@ function efeitoDigitacaoVetor() {
   digitarProximo();
 }
 efeitoDigitacaoVetor();
+
+document.getElementById('formularioContato').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const dados = {
+    nome: form.nome.value,
+    email: form.email.value,
+    mensagem: form.mensagem.value
+  };
+
+  const resposta = await fetch('/enviar', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(dados)
+  });
+  window.location.reload();
+});
