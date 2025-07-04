@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JO - Desenvolvedor Front-End</title>
-  <link rel="shortcut icon" href="/images/logo.jpg" type="image/x-icon">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="shortcut icon" href="../images/logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
@@ -115,7 +115,7 @@
       <div class="bg-neutral-50 dark:bg-gray-800 dark:text-neutral-50 shadow-xl border dark:border-none border-gray-100 m-8 mt-0 rounded-xl p-7 lg:p-10">
         <h3 class="text-2xl mb-5">Envie uma mensagem</h3>
         
-        <form id="formularioContato" class="grid">
+        <form id="formularioContato" action="../enviar.php" method="post" class="grid">
           <label class="text-lg" for="nome">Nome</label>
           <input class="dark:border-none dark:bg-gray-700 border border-gray-400 rounded-lg h-10 my-3 p-5" type="text" name="nome" id="nome">
           <label for="nome">Email</label>
@@ -196,6 +196,6 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="/scripts/script.js"></script>
+  <script src="../scripts/script.js"></script>
 </body>
 </html>

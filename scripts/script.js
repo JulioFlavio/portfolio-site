@@ -8,7 +8,7 @@ function aviso() {
 }
 
 async function pesquisaJson() {
-  await fetch("/db/informacoes.json")
+  await fetch("../db/informacoes.json")
   .then((response) => {
     return response.json();
   })
@@ -171,26 +171,26 @@ pesquisaJson()
 consultaRepositoriosGithub()
 efeitoDigitacaoVetor();
 
-document.getElementById('formularioContato').addEventListener('submit', async (e) => {
-  e.preventDefault();
+// document.getElementById('formularioContato').addEventListener('submit', async (e) => {
+//   e.preventDefault();
 
-  const nome = document.getElementById("nome").value;
-  const email = document.getElementById("email").value;
-  const mensagem = document.getElementById("mensagem").value;
+//   const nome = document.getElementById("nome").value;
+//   const email = document.getElementById("email").value;
+//   const mensagem = document.getElementById("mensagem").value;
 
-  const dados = {
-    email,
-    mensagem,
-    nome
-  };
+//   const dados = {
+//     email,
+//     mensagem,
+//     nome
+//   };
 
-  const resposta = await fetch('/enviar', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(dados)
-  });
+//   const resposta = await fetch('/enviar', {
+//     method: 'POST',
+//     headers: { 'Content-Type': 'application/json' },
+//     body: JSON.stringify(dados)
+//   });
 
-  const response = await resposta.json()
-  console.log(response)
-  // window.location.reload();
-});
+//   const response = await resposta.json()
+//   console.log(response)
+//   // window.location.reload();
+// });
