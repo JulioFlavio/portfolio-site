@@ -171,26 +171,23 @@ pesquisaJson()
 consultaRepositoriosGithub()
 efeitoDigitacaoVetor();
 
-// document.getElementById('formularioContato').addEventListener('submit', async (e) => {
-//   e.preventDefault();
+const urlParams = new URLSearchParams(window.location.search);
+const status = urlParams.get('status');
 
-//   const nome = document.getElementById("nome").value;
-//   const email = document.getElementById("email").value;
-//   const mensagem = document.getElementById("mensagem").value;
+if (status === 'sucesso') {
+  Swal.fire({
+    icon: 'success',
+    title: 'Mensagem enviada!',
+    text: 'Recebi seu contato e logo te respondo.',
+    confirmButtonColor: '#3085d6'
+  });
+}
 
-//   const dados = {
-//     email,
-//     mensagem,
-//     nome
-//   };
-
-//   const resposta = await fetch('/enviar', {
-//     method: 'POST',
-//     headers: { 'Content-Type': 'application/json' },
-//     body: JSON.stringify(dados)
-//   });
-
-//   const response = await resposta.json()
-//   console.log(response)
-//   // window.location.reload();
-// });
+if (status === 'erro') {
+  Swal.fire({
+    icon: 'error',
+    title: 'Erro ao enviar!',
+    text: 'Tente novamente mais tarde.',
+    confirmButtonColor: '#d33'
+  });
+}
